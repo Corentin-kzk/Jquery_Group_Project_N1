@@ -1,2 +1,2 @@
 # Test PUSH
-tests
+test
