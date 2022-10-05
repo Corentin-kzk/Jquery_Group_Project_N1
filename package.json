@@ -1,0 +1,22 @@
+{
+  "name": "jquery_group_project_n1",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Corentin-kzk/Jquery_Group_Project_N1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Corentin-kzk/Jquery_Group_Project_N1/issues"
+  },
+  "homepage": "https://github.com/Corentin-kzk/Jquery_Group_Project_N1#readme",
+  "dependencies": {
+    "three.js": "^0.77.1"
+  }
+}
