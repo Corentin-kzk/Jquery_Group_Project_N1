@@ -1,4 +1,4 @@
-var jqxhr = $.get("https://opensky-network.og/api/states/all?icao24=D304", function (data) {
+var jqxhr = $.get("https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444", function (data) {
     console.log(data);
 })
     .done(function (data) {
@@ -11,7 +11,7 @@ var jqxhr = $.get("https://opensky-network.og/api/states/all?icao24=D304", funct
         alert("finished");
     });
 
-    
+
 // Data icao24 test :
 // 39D304
 // 39828E
