@@ -5,22 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      defer
-    ></script>
-    <script src="https://d3js.org/d3.v7.min.js" defer></script>
-    <script src="./index.js" defer></script>
-    <script src="./map.js" defer></script>
   </head>
   <body>
     <header><h1 id="h01"></h1></header>
     <main></main>
     <footer></footer>
     <style>
-      body {
-        background-color: aqua;
-      }
       #map-layer {
         position: absolute;
         left: 0;
@@ -36,79 +26,11 @@
     </style>
 
     <canvas width="960" height="600" id="map-layer"></canvas>
+    <i class="fa-solid fa-plane"></i>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://unpkg.com/topojson-client@2"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
     <script src="versor.js"></script>
-    <script>
-      var canvas = d3.select("canvas"),
-        width = canvas.property("width"),
-        height = canvas.property("height"),
-        context = canvas.node().getContext("2d");
-
-      var projection = d3
-        .geoOrthographic()
-        .scale((height - 40) / 2)
-        .translate([width / 2, height / 2])
-        .precision(0.1);
-
-      var path = d3.geoPath().projection(projection).context(context);
-
-      canvas.call(d3.drag().on("start", dragstarted).on("drag", dragged));
-
-      var render = function () {},
-        v0, // Mouse position in Cartesian coordinates at start of drag gesture.
-        r0, // Projection rotation as Euler angles at start.
-        q0; // Projection rotation as versor at start.
-
-      function dragstarted() {
-        v0 = versor.cartesian(projection.invert(d3.mouse(this)));
-        r0 = projection.rotate();
-        q0 = versor(r0);
-      }
-
-      function dragged() {
-        var v1 = versor.cartesian(projection.rotate(r0).invert(d3.mouse(this))),
-          q1 = versor.multiply(q0, versor.delta(v0, v1)),
-          r1 = versor.rotation(q1);
-        projection.rotate(r1);
-        render();
-
-        // Rotate Three.js objects according to the versor
-        // for some strange reason the order of arguments is not the same
-        var q = new THREE.Quaternion(-q1[2], q1[1], q1[3], q1[0]);
-        //q.normalize() // not needed since our versor norm = 1
-        sphereObject.setRotationFromQuaternion(q);
-        drawShadeLayer();
-      }
-
-      d3.json(
-        "https://unpkg.com/world-atlas@1/world/110m.json",
-        function (error, world) {
-          if (error) throw error;
-
-          var sphere = { type: "Sphere" },
-            land = topojson.feature(world, world.objects.land);
-
-          render = function () {
-            context.clearRect(0, 0, width, height);
-            context.beginPath(),
-              path(land),
-              (context.strokeStyle = "#fff"),
-              context.beginPath(),
-              path(sphere),
-              (context.fillStyle = "#fff"),
-              context.fill(),
-              context.beginPath(),
-              path(land),
-              (context.fillStyle = "#000"),
-              context.fill(),
-              context.stroke();
-          };
-
-          render();
-        }
-      );
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
