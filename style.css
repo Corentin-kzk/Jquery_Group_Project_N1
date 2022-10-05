@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background: aliceblue;
+    height: 100vh;
+}
+header {
+    padding: 1em;
+    background: #262626;
+}
+nav .toggle 
+nav .logo {
+    display: inline-block;
+}
+nav .single-menu {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+}
+nav .single-menu:hover,
+nav .single-menu:active {
+    background: #fff;
+    color: #262626;
+}
+nav .logo {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    width: 15em;
+    text-align: center;
+    padding: 1em;
+    color: #fff;
+}
+nav .toggle {
+    vertical-align: middle;
+    padding: 1em;
+    color: #fff;
+}
+
+@media (min-width: 48em) {
+    nav {
+        display: flex;  
+    }
+    nav .menu {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+    }
+    nav .single-menu {
+        width: auto;
+    }
+    nav .toggle {
+        display: none;
+    }
+}
+nav div {
+    display: none;
+}
+@media (min-width: 48em) {
+    nav div {
+        display: flex;
+    }
+}
+@media (max-width: 48em) {
+    nav.active .toggle {
+        background: skyblue;
+    }
+    nav.active div {
+        display: block;
+    }
+    nav .logo {
+        width: 14em;
+    }
+}
+
+main {
+    width: 65vw;
+    margin: auto;
+}
+
+.table-flying {
+    width: 100%;
+}
+.table-flying > * {
+    text-align: center;
+}
+
+
