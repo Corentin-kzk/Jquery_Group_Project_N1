@@ -1,5 +1,4 @@
-var jqxhr = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=fated-sepulcher-of-the-first-ones&difficulty=mythic&region=eu", function (data) {
-    console.log(data);
+var hallOfFame = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=" + $("#raid") + "&difficulty=" + $("#difficulty") + "&region=" + $("#region"), function () {
 })
     .done(function (data) {
         console.log(data);
@@ -8,14 +7,18 @@ var jqxhr = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=fated-sepu
         console.log(error);
     })
 
-    //Exemple Guildes pour recherche:
-    //Jetzt Gehts Los
 
+var Guild = $.get("https://raider.io/api/v1/guilds/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#guildName"), function () {
+})
+    .done(function (data) {
+        console.log(data);
+    })
+    .fail(function (error) {
+        console.log(error);
+    })
 
-      
-
-// Data icao24 test :
-// 39D304
-// 39828E
-// 40600D
-// 406A59
+//Exemple Guildes pour recherche: Code pour les espaces : %20
+//Jetzt Gehts Los
+//Les tortues du bosquet
+//La Compagnie du Corbeau
+//La Rive Noire
