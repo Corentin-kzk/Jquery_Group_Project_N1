@@ -1,3 +1,4 @@
+import './searchContainer/search.js'
 const ApiResponse = {
   result: [
     {
