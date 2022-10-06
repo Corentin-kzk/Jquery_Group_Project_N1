@@ -1,5 +1,5 @@
 //https://raider.io/api/v1/raiding/hall-of-fame?raid=nyalotha-the-waking-city&difficulty=mythic&region=eu
-var hallOfFame = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=" + $("#raid") + "&difficulty=" + $("#difficulty") + "&region=" + $("#region"), function () {
+var hallOfFame = $.ajax("https://raider.io/api/v1/raiding/hall-of-fame?raid=" + $("#raid") + "&difficulty=" + $("#difficulty") + "&region=" + $("#region"), function () {
 })
     .done(function (data) {
         console.log(data);
@@ -10,7 +10,7 @@ var hallOfFame = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=" + $
 
 
 //https://raider.io/api/v1/guilds/profile?region=eu&realm=Hyjal&name=Jetzt%20Gehts%20Los
-var guildInfo = $.get("https://raider.io/api/v1/guilds/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#guildName"), function () {
+var guildInfo = $.ajax("https://raider.io/api/v1/guilds/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#guildName"), function () {
 })
     .done(function (data) {
         console.log(data);
@@ -27,7 +27,7 @@ var guildInfo = $.get("https://raider.io/api/v1/guilds/profile?region=" + $("#re
 //
 
 //https://raider.io/api/v1/mythic-plus/affixes?region=eu&locale=fr
-var mythicsAffixes = $.get("https://raider.io/api/v1/mythic-plus/affixes?region=" + $("#region") + "&locale=" + $("#lang"), function () {
+var mythicsAffixes = $.ajax("https://raider.io/api/v1/mythic-plus/affixes?region=" + $("#region") + "&locale=" + $("#lang"), function () {
 })
     .done(function (data) {
         console.log(data);
@@ -38,7 +38,7 @@ var mythicsAffixes = $.get("https://raider.io/api/v1/mythic-plus/affixes?region=
 
 
 //https://raider.io/api/v1/characters/profile?region=eu&realm=Hyjal&name=Eolran
-var charInfo = $.get("https://raider.io/api/v1/characters/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#charName"), function () {
+var charInfo = $.ajax("https://raider.io/api/v1/characters/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#charName"), function () {
 })
     .done(function (data) {
         console.log(data);
