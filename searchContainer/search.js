@@ -21,4 +21,3 @@ $(".close-btn").click(function () {
   $(".search-data label").fadeOut(500);
   $(".search-data span").fadeOut(500);
 });
-
