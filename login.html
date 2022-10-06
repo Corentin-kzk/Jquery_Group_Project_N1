@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentification</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./service/Auth/auth.css">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      defer
+    ></script>
+    <script src="./service/Auth/auth.js" defer></script>
+  </head>
+ 
+  <body>
+    <header>
+      <div class='w-25 h-100' >
+    <img src="./images/logo.png" alt="logo World Of Warcraft" width="100%" height="100%"/>
+    </div>
+    </header>
+    <main>
+    <div class="row m-0 h-100 justify-content-center">
+        <form id="tform" class="h-25 align-self-center flex-column w-25 gap-2">
+          <label for="login" class="text-center"> UserName</label>
+            <input  name="login" type="text"/>
+            <label for="password" class="text-center"> Password</label>
+            <input id="password" name="password" type="password" />
+            <button type="submit" class="my-5 btn__login"> Connexion</button>
+            <span class='text-center 'id="error"></span>
+        </form>
+
+    </div>
+  </main>
+  <footer class="justify-content-end row">
+    <p class="text-center align-self-center">Copyright 2004-2022 Blizzard-Entertainement. All Right Reserved</p>
+  </footer>
+  </body>
+</html>
