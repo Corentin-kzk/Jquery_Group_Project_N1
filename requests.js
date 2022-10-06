@@ -8,8 +8,6 @@ var jqxhr = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=fated-sepu
         console.log(error);
     })
 
-
-
     //Exemple Guildes pour recherche:
     //Jetzt Gehts Los
 
