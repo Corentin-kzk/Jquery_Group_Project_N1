@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 .container {
     background: aliceblue;
     height: 100vh;
@@ -17,7 +20,7 @@ nav .logo {
 }
 nav .single-menu {
     color: #fff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
     display: block;
     width: 100%;
     text-align: center;
@@ -31,7 +34,7 @@ nav .single-menu:active {
 }
 nav .logo {
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
     width: 15em;
     text-align: center;
     padding: 1em;
@@ -86,9 +89,37 @@ main {
 
 .table-flying {
     width: 100%;
+    margin: 40px 0px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 0px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.34); 
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.34);
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #262626;
+    border-style: solid;
+    color: #262626;
 }
+.table-flying td {
+   padding: 16px;
+}
+.table-flying th {
+    font-size: 20px;
+    padding: 20px 0px 10px 0px;
+    background-color: #262626;
+    color: #fff;
+ }
 .table-flying > * {
     text-align: center;
 }
+
+.table-flying td, .table-flying th {
+    border-width: 2px;
+    border-color: #262626;
+    border-style: solid;
+    padding: 20px;
+}
+
 
 
