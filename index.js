@@ -46,7 +46,7 @@ const ApiResponse = {
       airline_iata: "FM",
       aircraft_icao: "B738",
       updated: 1626153069,
-      status: "en-route",
+      status: "landed",
     },
     {
       hex: "780695",
@@ -94,7 +94,7 @@ const ApiResponse = {
       airline_iata: "FM",
       aircraft_icao: "B738",
       updated: 1626153069,
-      status: "en-route",
+      status: "scheduled",
     },
   ],
 };
@@ -109,9 +109,23 @@ $(document).ready(() => {
 });
 
 const MakeDynamicalTable = (id, flyInformations) => {
+  let planeIconeStatus;
+
+  switch (flyInformations.status) {
+    case "landed":
+      planeIconeStatus = '<i class="fa-solid fa-plane-arrival"></i>';
+      break;
+    case "scheduled":
+      planeIconeStatus = '<i class="fa-solid fa-clock"></i>';
+      break;
+    default:
+      planeIconeStatus = '<i class="fa-solid fa-plane"></i>';
+      break;
+  }
+
   return `<tr id='${id}'>
     <td class="text-center">${flyInformations.dep_iata}</td>
-    <td class="text-center">${flyInformations.status}</td>
+    <td class="text-center">${planeIconeStatus}</td>
     <td class="text-center">${flyInformations.flight_number}</td>
     <td class="text-center">${flyInformations.arr_iata}</td>
     </tr>`;
