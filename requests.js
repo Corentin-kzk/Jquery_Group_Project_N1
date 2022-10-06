@@ -27,7 +27,7 @@ var guildInfo = $.ajax("https://raider.io/api/v1/guilds/profile?region=" + $("#r
 //
 
 //https://raider.io/api/v1/mythic-plus/affixes?region=eu&locale=fr
-var mythicsAffixes = $.ajax("https://raider.io/api/v1/mythic-plus/affixes?region=" + $("#region") + "&locale=" + $("#lang"), function () {
+var mythicsAffixes = $.ajax("https://raider.io/api/v1/mythic-plus/affixes?region=" + $("#region") + "&locale=en", function () {
 })
     .done(function (data) {
         console.log(data);
