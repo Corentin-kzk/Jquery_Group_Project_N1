@@ -1,3 +1,4 @@
+//https://raider.io/api/v1/raiding/hall-of-fame?raid=nyalotha-the-waking-city&difficulty=mythic&region=eu
 var hallOfFame = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=" + $("#raid") + "&difficulty=" + $("#difficulty") + "&region=" + $("#region"), function () {
 })
     .done(function (data) {
@@ -8,7 +9,8 @@ var hallOfFame = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=" + $
     })
 
 
-var Guild = $.get("https://raider.io/api/v1/guilds/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#guildName"), function () {
+//https://raider.io/api/v1/guilds/profile?region=eu&realm=Hyjal&name=Jetzt%20Gehts%20Los
+var guildInfo = $.get("https://raider.io/api/v1/guilds/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#guildName"), function () {
 })
     .done(function (data) {
         console.log(data);
@@ -22,3 +24,25 @@ var Guild = $.get("https://raider.io/api/v1/guilds/profile?region=" + $("#region
 //Les tortues du bosquet
 //La Compagnie du Corbeau
 //La Rive Noire
+//
+
+//https://raider.io/api/v1/mythic-plus/affixes?region=eu&locale=fr
+var mythicsAffixes = $.get("https://raider.io/api/v1/mythic-plus/affixes?region=" + $("#region") + "&locale=" + $("#lang"), function () {
+})
+    .done(function (data) {
+        console.log(data);
+    })
+    .fail(function (error) {
+        console.log(error);
+    })
+
+
+//https://raider.io/api/v1/characters/profile?region=eu&realm=Hyjal&name=Eolran
+var charInfo = $.get("https://raider.io/api/v1/characters/profile?region=" + $("#region") + "&realm=" + $("#realm") + "&name=" + $("#charName"), function () {
+})
+    .done(function (data) {
+        console.log(data);
+    })
+    .fail(function (error) {
+        console.log(error);
+    })
