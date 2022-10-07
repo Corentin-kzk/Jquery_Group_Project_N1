@@ -18,6 +18,7 @@ npm-debug.log*
 /amd
 /external
 /node_modules
+/.vscode
 
 /test/data/core/jquery-iterability-transpiled.js
 /test/data/qunit-fixture.js
