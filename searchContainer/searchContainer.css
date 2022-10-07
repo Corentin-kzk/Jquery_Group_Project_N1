@@ -40,7 +40,7 @@
     text-align: center;
     /* display: none; */
   }
-  .search-data input{
+  .search-data select{
     height: 100%;
     width: 100%;
     background: none;
