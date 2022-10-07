@@ -1,9 +1,48 @@
 function hallOfFame() {
     //https://raider.io/api/v1/raiding/hall-of-fame?raid=nyalotha-the-waking-city&difficulty=mythic&region=eu
-    var hallOfFame = $.ajax("https://raider.io/api/v1/raiding/hall-of-fame?raid=" + $("#raid") + "&difficulty=" + $("#difficulty") + "&region=" + $("#region"), function () {
+    var hallOfFame = $.ajax("https://raider.io/api/v1/raiding/hall-of-fame?raid=nyalotha-the-waking-city&difficulty=mythic&region=eu", function () {
     })
         .done(function (data) {
-            console.log(data);
+            console.log(data)
+            $("main table").remove()
+            let TableDinamicString;
+            const MakeDynamicalTable = (informations) => {
+                console.log(informations)
+
+                return `<table>
+                            <thead>
+                                <tr>
+                                    <th>${informations.bossSummary.boss}</th>
+                                </tr>
+                                <tr>
+                                    <th>Top</th>
+                                    <th>Name</th>
+                                    <th>Server</th>
+                                    <th>Region</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbodyHOF">${MakeDynamicalTableBody(informations.bossKills.defeatedBy.guilds)}</tbody>
+                        </table>`;
+            };
+            const MakeDynamicalTableBody = (informations) => {
+
+                return `<tr>
+                            <td>1</td>
+                            <td>${informations.guild.name}</td>
+                            <td>${informations.guild.realm.name}</td>
+                            <td>${informations.guild.region.name}</td>
+                        </tr>`;
+            };
+            $.each(data.hallOfFame.bossKills, (informations) => {
+                TableDinamicString += MakeDynamicalTable(informations);
+                $.each(data.bossKills.defeatedBy.guilds, (guildsInformations) => {
+                    MakeDynamicalTableBody(guildsInformations);
+                })
+            });
+
+            $("main").append(TableDinamicString);
+
+
         })
         .fail(function (error) {
             console.log(error);
@@ -31,8 +70,8 @@ function Guild() {
 }
 
 function Affixes() {
-    //https://raider.io/api/v1/mythic-plus/affixes?region=eu&locale=fr
-    var mythicsAffixes = $.ajax("https://raider.io/api/v1/mythic-plus/affixes?region=" + $("#region") + "&locale=en", function () {
+    //https://raider.io/api/v1/mythic-plus/affixes?region=eu&locale=en
+    var mythicsAffixes = $.ajax("https://raider.io/api/v1/mythic-plus/affixes?region=eu&locale=en", function () {
     })
         .done(function (data) {
             console.log(data);
@@ -55,4 +94,6 @@ function Character() {
         })
 
 }
+
 $("#HOF").click(hallOfFame);
+$("#affixes").click(Affixes);

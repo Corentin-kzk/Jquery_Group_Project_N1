@@ -60,7 +60,7 @@ const addFieldWithInputTypeHOF = () => {
       <option value="char">Search a Character</option>
       <option value="HOF">Raid Hall Of Fame</option>
     </select>
-    <input type="submit" value="submit">
+    <input class="btn-search" type="submit" value="Search">
     </form>`
   );
 };
