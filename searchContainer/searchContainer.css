@@ -43,7 +43,7 @@
   .search-data select{
     height: 100%;
     width: 100%;
-    background: none;
+    background: #262626;
     border: none;
     outline: none;
     font-size: 22px;
