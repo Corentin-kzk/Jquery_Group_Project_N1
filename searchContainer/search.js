@@ -14,7 +14,7 @@ $(".search-btn").click(function () {
 $(".close-btn").click(function () {
   $(".wrapper").removeClass("active");
   $(".search-btn").fadeIn(800);
-  $(".search-data").fadeOut(500);
+  $(".search-data").fadegit Out(500);
   $(".close-btn").fadeOut(500);
   $(".search-data .line").removeClass("active");
   $("input").val("");
@@ -22,14 +22,29 @@ $(".close-btn").click(function () {
   $(".search-data span").fadeOut(500);
 });
 
-const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
+// Anub'Rekhan
+// Grand Widow Faerlina
+// Maexxna
+// Noth the Plaguebringer
+// Heigan the Unclean
+// Loatheb
+// Instructor Razuvious
+// Gothik the Harvester
+// The Four Horsemen
+// Patchwerk – Patchwerk want to play!
+// Grobbulus
+// Gluth
+// Thaddius
+// Sapphiron
+// Kel'Thuzad
+const addFieldWithInputTypeHOF = () => {
   $(".search-data").append(
     `  <form action=""><select name="" id="searchSelect">
       <option value="null">Select a raid</option>
-      <option value="affixes">Check the weekly MM+ Affixes</option>
-      <option value="guild">Search a Guild</option>
-      <option value="char">Search a Character</option>
-      <option value="HOF">Raid Hall Of Fame</option>
+      <option value="Naxxramas">Naxxramas</option>
+      <option value="Anub'Rekhan">Anub'Rekhan</option>
+      <option value="Grand Widow Faerlinar">Grand Widow Faerlina</option>
+      <option value="Grand Widow Faerlina">Grand Widow Faerlina</option>
     </select>
     <select name="" id="searchSelect">
       <option value="null">Select a difficulty</option>
@@ -50,126 +65,88 @@ const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
   );
 };
 
-// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
-//   $(".search-data").append(
-//     ` <select name="" id="searchSelect">
-//       <option value="null">Select a raid</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a difficulty</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a region</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>`
-//   );
-// };
+const addFieldWithInputTypeCHAR = () => {
+  $(".search-data").append(
+    `  <form action=""><select name="" id="searchSelect">
+    <option value="null">Select a region</option>
+    <option value="affixes">Check the weekly MM+ Affixes</option>
+    <option value="guild">Search a Guild</option>
+    <option value="char">Search a Character</option>
+    <option value="HOF">Raid Hall Of Fame</option>
+  </select>
+  <select name="" id="searchSelect">
+    <option value="null">Select a serveur</option>
+    <option value="affixes">Check the weekly MM+ Affixes</option>
+    <option value="guild">Search a Guild</option>
+    <option value="char">Search a Character</option>
+    <option value="HOF">Raid Hall Of Fame</option>
+  </select>
+  <input type="text" placeholder="Guild Name">
+  <input type="submit" value="submit">
+  </form>`
+  );
+};
 
-// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
-//   $(".search-data").append(
-//     ` <select name="" id="searchSelect">
-//       <option value="null">Select a raid</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a difficulty</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a region</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>`
-//   );
-// };
+const addFieldWithInputTypeGUILD = () => {
+  $(".search-data").append(
+    `  <form action=""><select name="" id="searchSelect">
+    <option value="null">Select a region</option>
+    <option value="affixes">Check the weekly MM+ Affixes</option>
+    <option value="guild">Search a Guild</option>
+    <option value="char">Search a Character</option>
+    <option value="HOF">Raid Hall Of Fame</option>
+  </select>
+  <select name="" id="searchSelect">
+    <option value="null">Select a realm</option>
+    <option value="affixes">Check the weekly MM+ Affixes</option>
+    <option value="guild">Search a Guild</option>
+    <option value="char">Search a Character</option>
+    <option value="HOF">Raid Hall Of Fame</option>
+  </select>
+  <input type="text" placeholder="Guild Name">
+  <input type="submit" value="submit">
+  </form>`
+  );
+};
 
-// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
-//   $(".search-data").append(
-//     ` <select name="" id="searchSelect">
-//       <option value="null">Select a raid</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a difficulty</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a region</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>`
-//   );
-// };
+const addFieldWithInputTypeAFFIXS = () => {
+  $(".search-data").append(
+    `  <form action=""><select name="" id="searchSelect">
+    <option value="null">Select a region</option>
+    <option value="affixes">Check the weekly MM+ Affixes</option>
+    <option value="guild">Search a Guild</option>
+    <option value="char">Search a Character</option>
+    <option value="HOF">Raid Hall Of Fame</option>
+  </select>
+  <input type="submit" value="submit">
+  </form>`
+  );
+};
 
-// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
-//   $(".search-data").append(
-//     ` <select name="" id="searchSelect">
-//       <option value="null">Select a raid</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a difficulty</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>
-//     <select name="" id="searchSelect">
-//       <option value="null">Select a region</option>
-//       <option value="affixes">Check the weekly MM+ Affixes</option>
-//       <option value="guild">Search a Guild</option>
-//       <option value="char">Search a Character</option>
-//       <option value="HOF">Raid Hall Of Fame</option>
-//     </select>`
-//   );
-// };
+const RemoveForm = () => {
+  $(".search-data form").remove();
+};
 
 $("#searchSelect").change(() => {
   switch ($("#searchSelect").val()) {
     case "guild":
-      console.log("Guild Selected");
+      RemoveForm();
+      addFieldWithInputTypeGUILD();
       break;
     case "HOF":
+      RemoveForm();
       addFieldWithInputTypeHOF();
       break;
     case "char":
-      console.log("Character Selected");
+      RemoveForm();
+      addFieldWithInputTypeCHAR();
       break;
     case "affixes":
-      console.log("MM+ Affixes Selected");
+      RemoveForm();
+      addFieldWithInputTypeAFFIXS();
       break;
     default:
-      console.log("Other Selected");
+      alert("Field need to be on selected choice");
       break;
   }
 });
