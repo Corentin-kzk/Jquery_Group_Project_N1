@@ -226,6 +226,15 @@ $(document).ready(() => {
   });
 
   $("#tbody").append(TableDinamicString);
+  
+  // $("tr").not(':first').hover(
+  //   function () {
+  //     $(this).css("background","yellow");
+  //   }, 
+  //   function () {
+  //     $(this).css("background","");
+  //   }
+  // );
 });
 
 const MakeDynamicalTable = (id, userInformations) => {
@@ -233,13 +242,13 @@ const MakeDynamicalTable = (id, userInformations) => {
 
   switch (userInformations.active_spec_role) {
     case "TANK":
-      specIconeStatus = '<i class="fa-solid fa-shield-halved"></i>';
+      specIconeStatus = '<i  class="fa-solid fa-shield-halved fa-2x"></i>';
       break;
     case "HEALING":
-      specIconeStatus = '<i class="fa-solid fa-kit-medical"></i>';
+      specIconeStatus = '<i  class="fa-solid fa-kit-medical fa-2x"></i>';
       break;
     default:
-      specIconeStatus = '<i class="fa-solid fa-fire-flame-curved"></i>';
+      specIconeStatus = '<i  class="fa-solid fa-fire-flame-curved fa-2x"></i>';
       break;
   }
 

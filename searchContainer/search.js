@@ -22,6 +22,137 @@ $(".close-btn").click(function () {
   $(".search-data span").fadeOut(500);
 });
 
+const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
+  $(".search-data").append(
+    `  <form action=""><select name="" id="searchSelect">
+      <option value="null">Select a raid</option>
+      <option value="affixes">Check the weekly MM+ Affixes</option>
+      <option value="guild">Search a Guild</option>
+      <option value="char">Search a Character</option>
+      <option value="HOF">Raid Hall Of Fame</option>
+    </select>
+    <select name="" id="searchSelect">
+      <option value="null">Select a difficulty</option>
+      <option value="affixes">Check the weekly MM+ Affixes</option>
+      <option value="guild">Search a Guild</option>
+      <option value="char">Search a Character</option>
+      <option value="HOF">Raid Hall Of Fame</option>
+    </select>
+    <select name="" id="searchSelect">
+      <option value="null">Select a region</option>
+      <option value="affixes">Check the weekly MM+ Affixes</option>
+      <option value="guild">Search a Guild</option>
+      <option value="char">Search a Character</option>
+      <option value="HOF">Raid Hall Of Fame</option>
+    </select>
+    <input class="btn-search" type="submit" value="Search">
+    </form>`
+  );
+};
+
+// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
+//   $(".search-data").append(
+//     ` <select name="" id="searchSelect">
+//       <option value="null">Select a raid</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a difficulty</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a region</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>`
+//   );
+// };
+
+// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
+//   $(".search-data").append(
+//     ` <select name="" id="searchSelect">
+//       <option value="null">Select a raid</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a difficulty</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a region</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>`
+//   );
+// };
+
+// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
+//   $(".search-data").append(
+//     ` <select name="" id="searchSelect">
+//       <option value="null">Select a raid</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a difficulty</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a region</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>`
+//   );
+// };
+
+// const addFieldWithInputTypeHOF = (nameRaid, difficulty, region) => {
+//   $(".search-data").append(
+//     ` <select name="" id="searchSelect">
+//       <option value="null">Select a raid</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a difficulty</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>
+//     <select name="" id="searchSelect">
+//       <option value="null">Select a region</option>
+//       <option value="affixes">Check the weekly MM+ Affixes</option>
+//       <option value="guild">Search a Guild</option>
+//       <option value="char">Search a Character</option>
+//       <option value="HOF">Raid Hall Of Fame</option>
+//     </select>`
+//   );
+// };
 
 $("#searchSelect").change(() => {
   switch ($("#searchSelect").val()) {
@@ -29,9 +160,9 @@ $("#searchSelect").change(() => {
       console.log("Guild Selected");
       break;
     case "HOF":
-      console.log("Hall Of Fame Selected");
+      addFieldWithInputTypeHOF();
       break;
-      case "char":
+    case "char":
       console.log("Character Selected");
       break;
     case "affixes":
