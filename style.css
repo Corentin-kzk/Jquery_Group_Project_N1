@@ -80,25 +80,20 @@ nav div {
     width: 14em;
   }
 }
-
 main {
   width: 65vw;
   margin: auto;
 }
 
 .table-flying {
-  width: 100%;
-  margin: 40px 0px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px 0px;
-  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.34);
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.34);
-  border-collapse: collapse;
-  border-width: 2px;
-  border-color: #262626;
-  border-style: solid;
-  color: #262626;
+    width: 100%;
+    margin: 40px 0px;
+    background: #fff;
+    padding: 20px 0px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.34); 
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.34);
+    border-collapse: collapse;
+    color: #262626;
 }
 .table-flying td {
   padding: 16px;
@@ -107,6 +102,7 @@ main {
 .table-flying td a{
   color: #262626;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .table-flying th {
@@ -119,10 +115,23 @@ main {
   text-align: center;
 }
 
-.table-flying td,
-.table-flying th {
-  border-width: 2px;
-  border-color: #262626;
-  border-style: solid;
-  padding: 20px;
+.table-flying td, .table-flying th {
+    border-width: 2px;
+    border-color: #262626;
+    padding: 20px;
 }
+tbody tr:nth-child(even) {
+    background: #e8e7e1;
+}
+
+.table-flying:hover tbody tr:nth-child(1):hover {background-color: 	#0070DD;}
+.table-flying:hover tbody tr:nth-child(2):hover {background-color: 	#F48CBA;}
+.table-flying:hover tbody tr:nth-child(3):hover {background-color: #FFF468;}
+.table-flying:hover tbody tr:nth-child(4):hover {background-color: #FF7C0A;}
+.table-flying:hover tbody tr:nth-child(5):hover {background-color: #3FC7EB;}
+.table-flying:hover tbody tr:nth-child(6):hover {background-color: #3FC7EB;}
+.table-flying:hover tbody tr:nth-child(7):hover {background-color: #8788EE;}
+
+
+
+

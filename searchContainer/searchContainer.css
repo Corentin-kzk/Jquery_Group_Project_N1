@@ -8,12 +8,12 @@
     height: 0px;
     width: 0px;
     border-radius: 100%;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    background: #262626;
     transition: all 0.4s linear;
   }
   .wrapper.active{
-    height: 4000px;
-    width: 4000px;
+    height: 100vh;
+    width: 100vh;
   }
   .search-btn{
     position: absolute;
@@ -43,7 +43,7 @@
   .search-data select{
     height: 100%;
     width: 100%;
-    background: none;
+    background: #262626;
     border: none;
     outline: none;
     font-size: 22px;
