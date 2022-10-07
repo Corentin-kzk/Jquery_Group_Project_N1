@@ -22,5 +22,23 @@ $(".close-btn").click(function () {
   $(".search-data span").fadeOut(500);
 });
 
-console.log("🚀 ~ file: search.js ~ line 25 ~ inputText", inputText)
-let s = $("input[type=text]").val() 
+
+$("#searchSelect").change(() => {
+  switch ($("#searchSelect").val()) {
+    case "guild":
+      console.log("Guild Selected");
+      break;
+    case "HOF":
+      console.log("Hall Of Fame Selected");
+      break;
+      case "char":
+      console.log("Character Selected");
+      break;
+    case "affixes":
+      console.log("MM+ Affixes Selected");
+      break;
+    default:
+      console.log("Other Selected");
+      break;
+  }
+});

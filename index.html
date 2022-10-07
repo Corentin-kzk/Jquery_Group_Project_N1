@@ -39,10 +39,15 @@
           </div>
           <!-- Search Box -->
           <div class="search-data">
-            <input type="text" required />
+            <select name="" id="searchSelect">
+              <option value="null">Select a search</option>
+              <option value="affixes">Check the weekly MM+ Affixes</option>
+              <option value="guild">Search a Guild</option>
+              <option value="char">Search a Character</option>
+              <option value="HOF">Raid Hall Of Fame</option>
+            </select>
             <div class="line"></div>
-            <label>Type to search..</label>
-            <span class="fas fa-search"></span>
+            
           </div>
         </div>
       </header>
@@ -50,16 +55,18 @@
         <table class="table-flying">
           <thead>
             <tr>
-              <th>Embarquement</th>
-              <th>Statu du vol</th>
-              <th>Numéro de vol</th>
-              <th>Arrivé</th>
+              <th>Avatar</th>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Role</th>
             </tr>
           </thead>
           <tbody id="tbody"></tbody>
         </table>
       </main>
-      <footer></footer>
+      <footer>
+        <button id="HOF">Test</button>
+      </footer>
     </div>
   </body>
 </html>

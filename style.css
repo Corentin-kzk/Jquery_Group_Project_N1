@@ -8,7 +8,6 @@ body {
 }
 .container {
   background: aliceblue;
-  height: 100vh;
 }
 header {
   padding: 1em;
@@ -104,6 +103,12 @@ main {
 .table-flying td {
   padding: 16px;
 }
+
+.table-flying td a{
+  color: #262626;
+  font-weight: bold;
+}
+
 .table-flying th {
   font-size: 20px;
   padding: 20px 0px 10px 0px;
