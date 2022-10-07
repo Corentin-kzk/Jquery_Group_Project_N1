@@ -117,6 +117,4 @@ var fakeDataWoW = [{
     "last_crawled_at": "2022-09-11T15:08:55.000Z",
     "profile_url": "https://raider.io/characters/eu/kirin-tor/Kelric",
     "profile_banner": "alliancebanner1"
-},
-
-]
+},]
