@@ -21,3 +21,6 @@ $(".close-btn").click(function () {
   $(".search-data label").fadeOut(500);
   $(".search-data span").fadeOut(500);
 });
+
+console.log("🚀 ~ file: search.js ~ line 25 ~ inputText", inputText)
+let s = $("input[type=text]").val() 
