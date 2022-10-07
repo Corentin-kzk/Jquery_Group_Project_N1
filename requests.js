@@ -1,4 +1,4 @@
-var jqxhr = $.get("https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444", function (data) {
+var jqxhr = $.get("https://raider.io/api/v1/raiding/hall-of-fame?raid=fated-sepulcher-of-the-first-ones&difficulty=mythic&region=eu", function (data) {
     console.log(data);
 })
     .done(function (data) {
@@ -8,6 +8,11 @@ var jqxhr = $.get("https://opensky-network.org/api/states/all?time=1458564121&ic
         console.log(error);
     })
 
+    //Exemple Guildes pour recherche:
+    //Jetzt Gehts Los
+
+
+      
 
 // Data icao24 test :
 // 39D304
